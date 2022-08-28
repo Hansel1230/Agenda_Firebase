@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <title>Agenda - Login</title>
+  </head>
+  <body>
+    <div class="container-form sign-up">
+      <div class="welcome-back">
+        <div class="message">
+          <h2>Bienvenido a su agenda</h2>
+          <p>Si ya tiene una cuenta inicie sesion aqui</p>
+          <button class="sign-up-btn">Iniciar Sesion</button>
+        </div>
+      </div>
+      <form class="formulario">
+        <h2 class="create-account">Crear una cuenta</h2>
+        <p class="cuenta-gratis">Crear una cuenta gratis</p>
+        <input type="text" id="name_Sing_Up" placeholder="Nombre" required />
+        <input type="email" id="email_Sing_Up" placeholder="Email" required />
+        <input
+          type="password"
+          id="password_Sing_Up"
+          placeholder="Contraseña"
+          required
+        />
+        <input type="button" value="Registrarse" id="boton_Sing_Up" />
+      </form>
+    </div>
+    <div class="container-form sign-in">
+      <form class="formulario">
+        <h2 class="create-account">Iniciar Sesion</h2>
+
+        <box-icon
+          name="envelope"
+          animation="tada"
+          color="rgba(230,146,188,0.97)"
+        ></box-icon>
+
+        <input type="email" id="email_Sing_In" placeholder="Email" required />
+        <input
+          type="password"
+          id="password_Sing_In"
+          placeholder="Contraseña"
+          required
+        />
+        <input type="button" value="Iniciar Sesion" id="boton_Sing_In" />
+      </form>
+
+      <div class="welcome-back">
+        <div class="message">
+          <h2>Bienvenido de nuevo a su agenda</h2>
+          <p>Si aun no tienes una cuenta resgistrate aqui</p>
+          <button class="sign-in-btn">Registrarse</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Firebase App is always required and must be first -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js";
+      ///////////////////////////////////////////////////////////
+      //import firebase from "https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js";
+      ///////////////////////////////////////////////////////////
+      import {
+        getStorage,
+        ref,
+      } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-storage.js";
+      ///////////////////////////////////////////////////////////
+      // firebase cofiguration
+      const firebaseConfig = {
+        apiKey: "AIzaSyBqkA1Ud_VE1CBp4hNdPh6fw02a5CE8qPA",
+        authDomain: "dbagendaprogramacionweb.firebaseapp.com",
+        projectId: "dbagendaprogramacionweb",
+        storageBucket: "dbagendaprogramacionweb.appspot.com",
+        messagingSenderId: "132566909521",
+        appId: "1:132566909521:web:9556f617f24d9b248dee70",
+      };
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+      //const db = firebase.firestore();
+    </script>
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <script src="script.js" type="module"></script>
+  </body>
+</html>

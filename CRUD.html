@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style-crud.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Agenda - CRUD</title>
+  </head>
+  <!-- <body onload="javascript:showContacts()"> -->
+  <body>
+    <div class="div-titulo">
+      <h1>Agenda CRUD</h1>
+    </div>
+    <div class="contenedor">
+      <div class="div-formulario">
+        <form action="#" id="formulario">
+          <box-icon
+            class="icon"
+            name="contact"
+            type="solid"
+            animation="burst"
+            color="#e834b9"
+          ></box-icon>
+          <input type="text" id="nombre" placeholder="Nombre" required />
+          <input type="text" id="apellido" placeholder="Apellido" required />
+          <input type="text" id="email" placeholder="Email" required />
+          <input type="text" id="numero" placeholder="Numero" required />
+          <button type="submit" id="btnAgregar">Agregar</button>
+        </form>
+      </div>
+
+      <div class="div-listado">
+        <h2>Listado Contactos</h2>
+        <div class="div-contactos"></div>
+      </div>
+    </div>
+
+    <button class="logoutLblPos" id="salir">Salir</button>
+
+    <!-- Firebase App is always required and must be first -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js";
+      ///////////////////////////////////////////////////////////
+      //import firebase from "https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js";
+      ///////////////////////////////////////////////////////////
+      import {
+        getStorage,
+        ref,
+      } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-storage.js";
+      ///////////////////////////////////////////////////////////
+      // firebase cofiguration
+      const firebaseConfig = {
+        apiKey: "AIzaSyBqkA1Ud_VE1CBp4hNdPh6fw02a5CE8qPA",
+        authDomain: "dbagendaprogramacionweb.firebaseapp.com",
+        projectId: "dbagendaprogramacionweb",
+        storageBucket: "dbagendaprogramacionweb.appspot.com",
+        messagingSenderId: "132566909521",
+        appId: "1:132566909521:web:9556f617f24d9b248dee70",
+      };
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+      //const db = firebase.firestore();
+    </script>
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
